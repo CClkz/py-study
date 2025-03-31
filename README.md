@@ -38,8 +38,14 @@ pip install poetry
 poetry init
 
 3. 安装依赖
-poetry install numpy
-
-4. 依赖加到配置文件
 poetry add numpy
+
+4. 验证 
+poetry show
+
+
+注意，执行python xxx.py时，依赖包会找pip全局安装的，不会找poetry安装的依赖包
+poetry安装的包在虚拟环境中（<项目目录>/.venv/Lib/site-packages/），需要使用poetry run python xxx.py
+
 ```
+
