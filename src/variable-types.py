@@ -46,3 +46,4 @@ def check_type(value):
         print(f"{value} 是字符串类型")
     elif isinstance(value, bool):
         print(f"{value} 是布尔类型")
+

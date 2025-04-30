@@ -10,8 +10,8 @@ class Person:
         print(f"大家好，我叫 {person['name']}，今年 {person['age']} 岁。")
 
     @staticmethod
-    def introduce(person):  # 不需要 self 参数
-        print(f"大家好，我叫 {person['name']}，今年 {person['age']} 岁。")
+    def staticIntroduce(person):  # 不需要 self 参数
+        print(f"static 大家好，我叫 {person['name']}，今年 {person['age']} 岁。")
 
 
 # 创建对象
@@ -19,7 +19,7 @@ person1 = Person("Alice", 25)
 person2 = Person("Bob", 30)
 
 # 调用对象的方法
-person1.introduce({"name": "Alice1", "age": 251})
-person2.introduce({"name": "Alice2", "age": 252})
+person1.introduce({"name": "Alice1", "age": 21})
+person2.introduce({"name": "Alice2", "age": 22})
 
-Person.introduce({"name": "Alice3", "age": 253})
+Person.staticIntroduce({"name": "Alice3", "age": 23})
