@@ -1,3 +1,6 @@
+# 1. 两数之和
+# https://leetcode.cn/problems/two-sum/
+
 class Solution(object):
     def twoSum(self, nums, target):
         for i in range(len(nums)-1):

@@ -26,6 +26,17 @@ pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```
 
+### 更换poetry镜像源
+
+```
+project.toml中添加
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = "primary"
+
+```
+
 ## 依赖管理
 
 ### 使用poetry创建pyproject.toml
@@ -49,3 +60,7 @@ poetry安装的包在虚拟环境中（<项目目录>/.venv/Lib/site-packages/�
 
 ```
 
+## 类型检查
+### 使用mypy进行类型检查
+安装mypy
+```

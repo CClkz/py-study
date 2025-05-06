@@ -7,8 +7,30 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.13"
-numpy = "^2.2.4"
+numpy = "^2.2.5"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.15.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.myp]
+python_version = "3.13"  # 根据项目实际情况调整
+strict = true  # 启用严格类型检查
+# 允许空列表推断为 list[Any]，不推荐启用，推荐启用严格模式
+# disallow_untyped_defs = false
+# disallow_incomplete_defs = false
+exclude = ["tests"]
+
+# 忽略特定模块的检查
+[[tool.mypy.overrides]]
+module = "django.*"
+ignore_missing_imports = true
