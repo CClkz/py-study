@@ -33,3 +33,21 @@ class Solution:
     # 后序遍历
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         return self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val] if root else []
+
+    # 层序遍历
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root:
+            return []
+        res = []
+        queue = [root]
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                node = queue.pop(0)
+                level.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            res.append(level)
+        return res
