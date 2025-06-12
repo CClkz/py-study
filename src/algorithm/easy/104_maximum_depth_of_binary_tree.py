@@ -7,6 +7,7 @@ from typing import Optional
 # 总结：
 # 最初想了30分钟没思路，突然灵光一闪，想出了递归的思路，还是要多加练习，基础的算法知识要理解透
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
