@@ -13,7 +13,6 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         min = prices[0]
         max = 0
-        r = len(prices) - 1
         for val in prices:
             if val < min:
                 min = val
