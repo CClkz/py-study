@@ -1,16 +1,12 @@
 # 环形链表
 from typing import Optional
+from src.algorithm.data_structures import ListNode
 # 解法：
 # 1. hash，访问过的存到集合里，后续出现重复的节点，则返回True
 # 2. 快慢指针
 # 快指针2步，慢指针1步，环形上一定互相的
 # 假设快指针在慢指针后面n步，每次前进差距会减1，n次后就会是0相交
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 
 class Solution:
