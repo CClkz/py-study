@@ -13,14 +13,7 @@
 # 左右侧可能还有多层节点，结社左侧节点还有多层吧，左侧再调用函数，拼接左侧节点下的 左 + 值 + 右，一层层递归
 # 当接收的节点为None时，返回[]
 from typing import List, Optional
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-
+from src.algorithm.data_structures import TreeNode
 
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:

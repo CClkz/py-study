@@ -1,5 +1,6 @@
 # 对称二叉树
 
+from src.algorithm.data_structures import TreeNode
 # 题解
 # 1. 递归
 # 分成左右两个子二叉树，先比根节点值，再比左根的左和右根的右、左根的右和右根的左
@@ -11,11 +12,6 @@
 #   /   /
 #  2   2
 # 中序遍历为[2,2,1,2,2]，和反转一样但不对称
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
 
 
 class Solution:
